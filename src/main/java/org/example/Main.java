@@ -3,7 +3,7 @@ package org.example;
 import java.util.Random;
 
 public class Main {
-    
+
     public static int[][] matrix1 = new int[3][3];
     public static int[][] matrix2 = new int[3][3];
     public static int[][] result = new int[3][3];
@@ -34,9 +34,9 @@ public class Main {
         System.out.println("Parallel multiplication by Gleb Pimenov.");
 
         // Creating on thread per row
-        Thread1 thread1 = new Thread1();
-        Thread2 thread2 = new Thread2();
-        Thread3 thread3 = new Thread3();
+        ThreadGeneric thread1 = new ThreadGeneric(0);
+        ThreadGeneric thread2 = new ThreadGeneric(1);
+        ThreadGeneric thread3 = new ThreadGeneric(2);
 
         // Filling matrix
         fillMatrix(matrix1);
